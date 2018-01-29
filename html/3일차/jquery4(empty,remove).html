@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>jquery 연습중</title>
+	<script src="jquery-3.3.1.min.js"></script>
+<script>
+			$(document).ready(function(){
+					$("label + input").css("color","blue")
+								      .val("please input");
+				     $("em").attr("title","erum");
+					 var title = $("em").attr("title");
+					 $("div").text(title);
+					 $("form").append('<input name="facebook" size="100" value="your facebook url"/>');
+					 $("form").prepend('<input name="facebook" size="100" value="your facebook url"/><br/>');
+					 $("form").before("<b>Hello</b>")
+							  .after("<b>do not copy my page</b>")
+							  .empty();					 
+			});
+
+</script>	
+</head>
+<body>
+		<form>
+				<label><em title="name">이름</em>:</label>
+				<input name="name" size="50" /> <br/>
+				<label>주소:</label>
+				<input name="addr" size="50" /> <br/>
+				<input name="hobby" size="50" /> <br/>				
+		</form>
+		<div></div>
+</body>
+</html>

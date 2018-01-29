@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+		<meta charset="UTF-8" />
+		<title>javascript 연습중</title>
+<script>		
+		/*document.querySelector("html").onclick = 
+				function() {
+					alert("누르지마");
+				}*/
+	window.onload = function() {
+			var h1_e1 = document.getElementById("aa");	// 실행안되는게 당연하다. html 특성상 위에서부터 순서대로 실행되는데
+														//head단계에서는 아직 aa가 뭔지 모르기때문에 에러다.
+														//onload를 추가해야한다. 즉 미리 한번 읽어놔야함
+			h1_e1.onclick = function() {
+					alert("감사합니다");
+			}
+		}
+</script>		
+</head>
+<body>
+		<h1 id ="aa" >javascript</h1>
+		
+</body>
+</html>

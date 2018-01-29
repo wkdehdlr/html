@@ -1,0 +1,38 @@
+<!doctpye html>
+<html>
+<head>
+<title> CSS 연습중 </title>
+<meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css?family=Kavivanar" rel="stylesheet">
+<style>
+		a {
+			display : inline-block;
+			color: #fff;
+			background: blue;
+			width:100px;
+			padding:10px;
+			text-align: center;
+			text-decoration: none;
+			font-family :'Kavivanar', cursive;
+			/*transition 변화
+			transition-property : background,width;
+			transition-duration: 1s;
+			transition-timing-function:ease-out;
+			transition-delay: 0.5s;
+			transition : background 1s ease-out 0.5;*/
+			transition : 
+					background 2s ease-out 1s;
+					/*width 2s ease-out 2s;*/		
+			
+		}
+		a:hover{
+				background:red;
+				width:200px;
+		}
+</style>
+</head>
+<body>
+		<a href="#">Button1</a>
+		<a href="#">Button2</a>
+</body>
+</html>

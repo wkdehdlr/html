@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>jquery 연습중</title>
+	<script src="jquery-3.3.1.min.js"></script>
+<script>
+			$(document).ready(function(){
+					$("input#num1").keyup(function(){
+						var num1 = $(this).val();
+						var num2 = $("input#num2").val();					
+						if($("select option:selected").text()=="+")						
+							var total = parseFloat(num1) + parseFloat(num2);
+						if($("select option:selected").text()=="-")						
+							var total = parseFloat(num1) - parseFloat(num2);
+						if($("select option:selected").text()=="*")						
+							var total = parseFloat(num1) * parseFloat(num2);
+						if($("select option:selected").text()=="/")						
+							var total = parseFloat(num1) / parseFloat(num2);							
+					$("input#total").val(total);					
+					}).keyup();
+					
+					$("input#num2").keyup(function(){
+						var num1 = $("input#num1").val();
+						var num2 = $(this).val();
+						if($("select option:selected").text()=="+")						
+							var total = parseFloat(num1) + parseFloat(num2);
+						if($("select option:selected").text()=="-")						
+							var total = parseFloat(num1) - parseFloat(num2);
+						if($("select option:selected").text()=="*")						
+							var total = parseFloat(num1) * parseFloat(num2);
+						if($("select option:selected").text()=="/")						
+							var total = parseFloat(num1) / parseFloat(num2);
+					$("input#total").val(total);
+					}).keyup();
+					
+					
+					$("select").change(function(){
+						var num1 = $("input#num1").val();
+						var num2 = $("input#num2").val();
+						if($("select option:selected").text()=="+")						
+							var total = parseFloat(num1) + parseFloat(num2);
+						if($("select option:selected").text()=="-")						
+							var total = parseFloat(num1) - parseFloat(num2);
+						if($("select option:selected").text()=="*")						
+							var total = parseFloat(num1) * parseFloat(num2);
+						if($("select option:selected").text()=="/")						
+							var total = parseFloat(num1) / parseFloat(num2);
+						$("input#total").val(total);												
+						}).change();						
+			});
+
+</script>	
+</head>
+<body>
+			<form>
+					<input id="num1" type="text" value="25" />
+					<select name="operator">
+						<option selected>+</option>
+						<option>-</option>
+						<option>*</option>
+						<option>/</option>						
+					</select>
+					<input id="num2" type="text" value="31" />
+					=
+					<input id="total" type="text" />					
+			</form>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!doctpye html>
+<html>
+<head>
+<title> CSS 연습중 </title>
+<meta charset="UTF-8" />
+<!--CSS style을 정의 -->
+<style>
+	h1 { 
+		font-size : 30px;
+		color:#ffbaad;
+		<!--display:block;-- block으로 막는다, 현재 cascading style sheet에 block이 적용되서
+						   실행화면에서 cascading style sheet다음에 눈에 보이지 않는 block이 적용되서 그 다움부터는
+						   그 옆에 글써지는게 아니라 그 간다-->
+		<!--    right top bottom left -->
+	    margin::10px  5px 2px    8px;
+		padding:10px;
+		background-color:#ffff00;
+		width : 100px;
+		height : 200px;
+		float:right;
+	}
+	p {
+		color:#0000ff;
+	}
+	#col {
+		color:yellow;
+		<!--background-color : #03ac0f;-->
+	}
+	.bb {
+		color : red;
+	}
+</style>
+</head>
+<body>
+	<h1>Cascading Style Sheet</h1>
+	<p>소개글</p>
+	<div id="col">
+		<p>설명문</p>
+	</div>
+	<div class="bb">
+		<p>설명문2</p>
+		설명문4
+	</div>
+	<div class="bb">
+		<p>설명문3</p>
+	</div>
+</body>
+</html>

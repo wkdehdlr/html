@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>jquery 연습중</title>
+	<script src="jquery-3.3.1.min.js"></script>
+<style>
+		img {
+				width:1024px;
+				height: 576px;
+		}
+		#photos {
+				position: absolute;
+				width:1024px;
+				height: 576px;
+				padding:10px;
+				border:solid 5px green;
+				box-shadow:0 5px 5px 10px blue;
+		}
+		#photos img{
+				position:absolute;
+				top:10px;
+				left:10px;
+		}
+</style>
+<script>
+			$(document).ready(function(){
+				$("#photos img:gt(0)").hide();//gt(0) 0보다 큰거 즉  > 0 이거임, >= 0 아님
+				
+				setInterval(function(){
+					var current = $("#photos img:visible");
+					var next = "";
+					if ( current.next().length == 1){
+						next = current.next();
+					}
+					else{
+						next = $("#photos img:eq(0)");
+					}
+					current.fadeOut(1000);
+					next.fadeIn(1000);
+				},3000);
+			});
+
+</script>	
+</head>
+<body>
+	
+		<div id="photos">
+			<img id="img1" src="messi1.jpg" />
+			<img id="img2" src="messi2.jpg" />									
+			<img id="img3" src="messi3.jpg" />												
+		</div>	
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+		<meta charset="UTF-8" />
+		<title>javascript 연습중</title>
+<script>		
+			window.onload = function() {
+					var act = document.getElementById("act");
+					//alert(act.textContent);
+					//act.textContent = "<strong>You are man</strong>";
+					//act.innerHTML = "<strong>You are man</strong>";
+					/*var span = act.getElementsByTagName("span");
+					alert(span.length);
+					for(var i=0;i<span.length;++i)
+					{
+						var item = span.item(i);
+						alert(item.textContent);
+					}
+					*/
+					
+					//kor
+					
+					var kor = document.getElementById("kor");
+					var korsum = document.getElementById("korsum");
+					var sum = 0;
+					for(var i=0; i<kor.getElementsByTagName("span").length; i++)
+					{
+							var score = kor.getElementsByTagName("span").item(i).textContent;
+							sum += parseFloat(score);//textContent는 무조건 문자열로 가져옴
+					}
+					korsum.getElementsByTagName("span").item(0).textContent= "sum = " +sum;
+					korsum.getElementsByTagName("span").item(1).textContent= "AVG = " +(sum/3);			
+			};
+
+</script>		
+</head>
+<body>
+		<p id="act">
+				<span>I</span> <br/>
+				<span>am</span> <br/>
+				<span>Man</span> <br/>
+		</p>
+		<p id="kor">
+				<span>90</span> <br/>
+				<span>80</span> <br/>
+				<span>70</span> <br/>
+		</p>
+		<p id="korsum">
+				<span>sum:</span> <br/>
+				<span>avg:</span> <br/>
+		</p>
+</body>
+</html>

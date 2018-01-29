@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>jquery 연습중</title>
+	<script src="jquery-3.3.1.min.js"></script>
+<script>
+			$(document).ready(function(){
+					$("input").keyup(function(){
+						var value =$(this).val();
+					$("div").text(value);
+					}).keyup();
+			});
+
+</script>	
+</head>
+<body>
+			<form>
+					<input type="text" value="happy weekend!" />
+			</form>
+			<div></div>
+</body>
+</html>

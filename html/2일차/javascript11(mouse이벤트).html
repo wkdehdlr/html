@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+		<meta charset="UTF-8" />
+		<title>javascript 연습중</title>
+<script>		
+			window.onload = function() {
+				var messi = document.getElementById("photo1");
+				messi.onmouseover = function() {
+					this.src = "messi2.jpg";
+				}
+				messi.onmouseout = function() {
+					this.src = "messi1.jpg";
+				}
+
+			}
+</script>		
+</head>
+<body>
+		<h1 id ="aa" >javascript</h1>
+		<img src="messi1.jpg" id="photo1" />
+</body>
+</html>

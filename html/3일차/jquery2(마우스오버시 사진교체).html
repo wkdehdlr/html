@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>jquery 연습중</title>
+<style>
+		img{
+			margin:0 5px 0 0;
+			float:left;
+		}
+		div:after{
+			content:"";
+			display:block;
+			clear:both;
+		}
+</style>	
+	<script src="jquery-3.3.1.min.js"></script>
+<script>
+			$(document).ready(function(){
+				$("img:odd").css("border","2px solid red");
+				
+				var originImg="";				
+				$("img").hover(function(){
+					originImg = $(this).attr("src");
+					$(this)
+					.css("border","2px solid red")
+					.attr("src","messi1.jpg");
+				}, function(){
+					$(this).css("border","none")
+						   .attr("src",originImg);
+						
+				});
+				
+				/*$("img:eq(2)").click(function(){
+					console.log(this);
+					$(this).css("border","2px solid red");
+				});*/
+				//$("img:eq(2)").css("border","2px solid red");
+			});
+</script>	
+</head>
+<body>
+		<div>
+				<p>
+					<img src="messi1.jpg" width="300"/>
+				</p>		
+				<p>
+					<img src="messi2.jpg" width="300"/>
+				</p>
+				<p>
+					<img src="messi3.jpg" width="300"/>
+				</p>
+				<p>
+					<img src="messi4.jpg" width="300"/>
+				</p>			
+				
+		</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+		<meta charset="UTF-8" />
+		<title>javascript 연습중</title>
+<script>		
+			window.onload = function(){
+					//setTimeout(Now,1000);
+					//window.setInterval(Now,1000);
+					Now();
+			}
+			function Now(){
+					var date = new Date();
+					var hour = date.getHours();
+					var min = date.getMinutes();
+					var sec = date.getSeconds();			
+					if(hour < 10) hour = "0"+hour;
+					if(min < 10) min = "0"+min;
+					if(sec < 10) sec = "0"+sec;
+					document.querySelector("div").textContent = 
+						hour + ":" + min + ":" + sec;
+					document.querySelector("div").style.fontSize = "64px";	
+					setTimeout(Now,1000);
+			}
+</script>		
+</head>
+<body>
+		<div>00:00:00</div>
+</body>
+</html>

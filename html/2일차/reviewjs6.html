@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+		<meta charset="UTF-8" />
+		<title>javascript 연습중</title>
+<script>	
+			/*생성자를 통한 객체생성
+			function Mybook(title,price,author){
+				this.title = title;
+				this.price = price;
+				this.author = author;
+			}
+			var mybook = new Mybook("삼국지",1000,"이문열");*/
+
+			/*
+			var mybook = {};
+			mybook.title  = "삼국지";
+			mybook.price  = 10000;
+			mybook.author = "이문열";*/
+			
+			var mybook = new Object();
+			mybook.title  = "삼국지";
+			mybook.price  = 10000;
+			mybook.author = "이문열";			
+			
+			
+			alert(mybook.title+"\n"+mybook.price+"\n"+mybook.author);
+</script>		
+</head>
+<body>
+		<h1>javascript</h1>
+		
+</body>
+</html>

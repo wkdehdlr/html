@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+         <meta charset="UTF-8"/>
+         <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+         <title>jquery 연습중</title>  
+         <link rel="stylesheet" href="colorbox.css" />
+         <script src="jquery-3.3.1.min.js"></script>
+         <script src="jquery.colorbox.js"></script>
+<script>
+         $(document).ready(function(){
+            $("#accordion div").hide();
+            $("#accordion h2").click(function(){
+                  $(this).next("#accordion div")
+                         .slideToggle("slow")
+                         //.slideDown("slow")
+                        // .siblings("#accordion div")
+                        // .slideUp("slow");
+                       // .hide("fast")
+            });
+         });
+</script>
+<style>
+         body{
+            font:12px Arial, Helvetica, sans-serif;
+         }
+         #accordion h2{
+            width:500px;;
+            padding:10px;
+            margin:0 0 2px 0;
+            border:1px dotted blue;
+            background-color: #f3f3f3;
+            font-size: 15px;
+            border-top: 3px solid red;
+         }
+         #accordion h2 a{
+            text-decoration: none;
+            color: #989d9d;
+            display: block;
+         }
+         #accordion div{
+            width:500px;
+            padding: 0 10px;
+            margin: 0 0 2px 0;
+            border: 1px dotted green;
+            color: #989d9d;
+         }
+</style>
+</head>         
+<body>   
+         <div id="accordion">
+               <h2><a href="#">smart phone</a></h2>
+               <div>
+                     <p>Galaxy S8</p>
+                     <p>Galaxy A8</p>
+                     <p>Galaxy S7</p>
+               </div>
+               <h2><a href="#">tablet</a></h2>
+               <div>
+                     <p>Galaxy tabs</p>
+                     <p>Galaxy tabs2</p>
+               </div>
+               <h2><a href="#">wearable</a></h2>
+               <div>
+                     <p>Galaxy Gear</p>
+                     <p>Galaxy 360</p>
+               </div>
+         </div>
+</body>
+</html>

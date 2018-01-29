@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>jquery 연습중</title>
+	<script src="jquery-3.3.1.min.js"></script>
+<script>
+			$(document).ready(function(){
+						$(".name").change(function(){
+								alert("change 호출됨");
+						});
+						
+						$("select").change(
+						function()
+						{
+								var str="";
+								$("select option:selected").each(
+									function()
+									{
+										str+=$(this).text()+" ";
+									}
+									);
+								$("div").text(str);	
+								//alert($("select option:selected").text());
+						})
+						.change();						
+			});
+
+</script>	
+</head>
+<body>
+			<form>
+					이름 : <input class="name" type="text" /><br/>
+					좋아하는음식(멀티선택가능) :
+					<select name="food" multiple>
+						<option>pizza</option>
+						<option selected>hamburger</option>
+						<option selected>spicy pork</option>
+					</select>
+			</form>
+			<div></div>
+</body>
+</html>

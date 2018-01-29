@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+		<meta charset="UTF-8" />
+		<title>javascript 연습중</title>
+<script>	
+			function Book(title,price,author){
+					this.title = title; 	//this를 뺀 title = title은 아무의미가 없다
+					this.price = price;
+					this.author = author;		
+					this.print = function(){ //메소드 //중요한건 함수이름이 function옆에 붙지 않고
+						this.sale();							//this키워드에 오는게 함수이름인거다.
+						alert("제목:"+this.title+"\n가격:"+this.price+"\n저자:"+this.author);
+					}
+					//this.sale = function() {
+					//		alert("가격" + this.price * 0.8); // 20% 세일
+					//}
+			}
+			
+			Book.prototype.sale = function() {
+						this.price = this.price * 0.8;
+							//alert("가격" + this.price * 0.8); // 20% 세일
+					}
+			
+			var book = new Book('삼국지',10000,'이문열');
+			book.print();
+			book.sale();
+			//alert("제목:"+book.title+"\n가격:"+book.price+"\n저자:"+book.author);
+			
+			//Date 객체(날짜 시간) 이미 만들어져있는 객체임
+			var date = new Date(); //현재시간 셋팅
+			alert( date.getFullYear() + "년" +(date.getMonth()+1) +"월"+date.getDate() + "일");
+</script>		
+</head>
+<body>
+		<h1>javascript</h1>
+		
+</body>
+</html>

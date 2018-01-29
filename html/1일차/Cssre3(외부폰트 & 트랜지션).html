@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+		<meta charset="UTF-8" />
+		<title>css review3</title>
+		<link href="https://fonts.googleapis.com/css?family=Risque" rel="stylesheet">
+		<style>
+		a{
+			/* 역시 api를 잘 찾아야한다. 다 나와있다!!!!!!!!!!!!1
+			   block은  It starts on a new line 라고 되어있다. 한행을 다 차지하고 새로운행에 추가된다는 뜻
+			   inline-block은 inline의 속성인 한줄에 여러개도 포함할수 있는 성질과 height와 width조절이 가능한 block의 성질도 포함
+			   그냥 inline은 한줄에 다 나오긴 하는데 height, width조절이 불가능, 즉 inline과 block을 섞어놓은것*/
+			display : inline-block;
+			color: #fff;
+			text-decoration : none;
+			background: blue;
+			text-align: center;
+			font-family: 'Risque', cursive;
+			width : 100px;
+			padding:10px;
+			
+			/*transition : background 0s ease-out 1s;*/
+		}
+		a:hover{
+			background:red;
+			width:200px;
+		}
+		</style>
+</head>
+<body>
+		<a href="#">Button1</a>
+		<a href="#">Button2</a>		
+</body>
+</html>

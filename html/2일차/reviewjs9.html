@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+		<meta charset="UTF-8" />
+		<title>javascript 연습중</title>
+<script>		
+			function Mybook(title,price){
+				this.title=title;
+				this.price=price;
+				
+				this.show = function(){
+					alert(this.title+"\n"+this.price);
+				}
+				//this.sale = function(){
+					//this.price *= 0.8;
+				//}
+			}
+			
+			var mybook = new Mybook("삼국지",1000);
+			//mybook.show();
+			//mybook.sale();
+			//mybook.show();
+			
+			Mybook.prototype.sale = function(){
+				this.price *= 0.8;
+			}
+
+			mybook.show();
+			mybook.sale();
+			mybook.show();
+			
+			
+			var date = new Date();
+			alert(date.getFullYear()+"년"+(date.getMonth()+1)+"월"+date.getDate()+"일");
+</script>		
+</head>
+<body>
+		<h1>javascript</h1>
+		
+</body>
+</html>

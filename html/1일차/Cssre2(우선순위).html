@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ko">
+<head>
+		<meta charset="UTF-8" />
+		<title>css review</title>		
+		
+		<style>
+		.bb{
+			background-color:yellow;
+		}
+		
+		/*div{
+			background-color:red;
+		}
+		div p{
+			background-color:blue;
+		}*/
+		p.cc{
+		background-color:purple;
+		}
+		p#test{
+		background-color:green
+		}
+		/*클래스보다는 id가 더 우선순위가 높고
+		  단일 div보다는 div를 타고 들어간 div p가 우선순위가 더 높다
+		  우선순위가 높다는 말은 즉, 대상을 더 구체화 시킨다는 뜻이다*/
+		
+		</style>		
+</head>
+<body>
+		<div id="aa" class="bb">
+		설명문1
+		<p id="test" class="cc">설명문2</p>
+		<p class="cc">설명문3</p>
+		</div>
+</body>
+</html>

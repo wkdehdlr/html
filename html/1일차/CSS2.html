@@ -1,0 +1,38 @@
+<!doctpye html>
+<html>
+<head>
+<title> CSS 연습중 </title>
+<meta charset="UTF-8" />
+<style>
+		div {
+			border : 2px solid #000;
+		}
+		div p {
+		background-color:red;
+		}
+		#text {
+		background-color:blue;
+		}
+		p {
+		background-color:yellow;
+		}
+		p#text {
+		background-color:red;
+		}
+		#text {
+		background-color:purple;
+		}
+		p.nok{
+		background-color:green;
+		}
+</style>
+</head>
+<body>
+	<div id="wrap">
+								<!--이렇게하면 다 무시되고 이게 우선적으로 적용됨.
+									실행순서로 봐도 이게 마지막으로 실행된다-->
+		<p id="text" class="nok" style="background-color:yellow">문단1</p>
+		<p>문단2</p>		
+	</div>
+</body>
+</html>

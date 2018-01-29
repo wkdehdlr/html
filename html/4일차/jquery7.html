@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ko">
+<head>
+		<meta charset="UTF-8"/>
+		<title>jquery 연습중</title>
+		<script src="jquery-3.3.1.min.js"></script>
+		<script src="jquery.easing.1.3.js"></script>
+<script>
+		$(document).ready(function(){
+			$("button").click(function(){
+				$("#div1").animate({
+					left:"250px",
+					width:"150px",
+					height:"150px",
+					opacity:"0.5"
+				},{
+					duration:"slow" /*slow,normal,fast,2000*/
+					,easing:"swing"
+				});	
+				$("#div2").animate({
+					left:"250px",
+					width:"150px",
+					height:"150px",
+					opacity:"0.5"
+				},{
+					duration:"fast" /*slow,normal,fast,2000*/
+					,easing:"swing"				
+				});
+				$("#div3").animate({
+					left:"250px",
+					width:"150px",
+					height:"150px",
+					opacity:"0.5"
+				},{
+					duration:"normal" /*slow,normal,fast,2000*/
+					,easing:"swing"					
+				});	
+				$("#div4").animate({
+					left:"250px",
+					width:"150px",
+					height:"150px",
+					opacity:"0.5"
+				},{
+					duration:2000 /*slow,normal,fast,2000*/
+					,easing:"swing"					
+				});	
+				$("#div5").animate({
+					left:"250px",
+					width:"150px",
+					height:"150px",
+					opacity:"0.5"
+				},{
+					duration:2000 /*slow,normal,fast,2000*/
+					,easing:"easeOutBounce"					
+				});					
+			});		
+		});
+</script>		
+		
+</head>
+<body>
+		<button>Start</button>
+		<p>종전에는 2007년 US오픈 16강에 오른 이형택(42·은퇴)이 기록한 36위였다. 
+
+정현은 호주오픈에서 알렉산더 즈베레프(5위·독일), 노바크 조코비치(13위·세르비아) 등을 연파하며 국내에 '테니스 신드롬'을 불러일으켰다. 
+
+한국 선수가 메이저 대회 4강까지 오른 것도 사상 최초였다. 
+
+종전 한국 선수의 메이저 대회 최고 성적은 1981년 US오픈 여자단식 이덕희(65·은퇴), 2000년과 2007년 역시 US오픈 남자단식 이형택의 16강이었다. 
+
+한편 29일 발표된 세계 랭킹에 따르면 라파엘 나달(스페인)이 여전히 1위를 지켰고, 호주오픈 우승자 로저 페더러(스위스)도 2위를 유지했다. 
+
+준우승한 마린 칠리치(크로아티아)가 6위에서 3위로 올랐고, 그리고르 디미트로프(불가리아)는 3위에서 4위로 한 계단 밀렸다. 
+		</p>
+		<div id="div1" style="background:rgb(255, 255, 0);
+		height:100px;width:100px;position:relative">slow
+		</div>
+		</br>
+		<div id="div2" style="background:yellow;
+		height:100px;width:100px;position:relative">normal
+		</div>
+		</br>
+		<div id="div3" style="background:yellow;
+		height:100px;width:100px;position:relative">fast
+		</div>
+		</br>
+		<div id="div4" style="background:yellow;
+		height:100px;width:100px;position:relative">2000
+		</div>	
+		</br>
+		<div id="div5" style="background:yellow;
+		height:100px;width:100px;position:relative">easeOutBounce
+		</div>	
+</body>
+</html>

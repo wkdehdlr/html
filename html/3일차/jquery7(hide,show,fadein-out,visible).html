@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>jquery 연습중</title>
+	<script src="jquery-3.3.1.min.js"></script>
+<script>
+			$(document).ready(function(){
+					/*$("#hide").click(function(){
+						$("p").hide("slow");//$("p").hide("fast");
+					});
+					$("#show").click(function(){
+						$("p").show(2000);
+					});	
+					$("#fadeout").click(function(){
+						$("#img1").fadeOut(1000);
+					});	
+					$("#fadein").click(function(){						
+						$("#img2").fadeIn(1000);						
+					});*/
+					alert($("img:visible").length);
+					var current = $("img:visible");
+					var next=current.next();					
+					//$("img:visible")현재 눈에 보이는 이미지
+			});
+
+</script>	
+</head>
+<body>
+			<button id="hide">Hide All</button>
+			<button id="show">Show All</button>
+			<button id="fadeout">Fade out</button>
+			<button id="fadein">Fade In</button>
+			<p> i am korean and japanese 1</p>
+			<p> i am korean and japanese 2</p>
+			<p> i am korean and japanese 3</p>
+			<p> i am korean and japanese 4</p>			
+			<img id="img1" src="messi1.jpg" />
+			<img id="img2" src="messi2.jpg" style="display:none" />									
+</body>
+</html>

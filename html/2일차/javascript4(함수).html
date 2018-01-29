@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+		<meta charset="UTF-8" />
+		<title>javascript 연습중</title>
+<script>	
+			var arr=[1,2,3,4,5];
+			function sum(x)
+			{
+				var res=0;
+				for(var i=0;i<x;++i)
+				{
+					res = res + arr[i];
+				}
+				return res;
+			}
+			function mul(x,y)
+			{
+				return x*y;
+			}
+			//alert(mul(10)); ->이건 안됨
+			//alert(mul(10,20)); -> 이게 가장 베스트
+			//alert(mul(10,20,30));-> 이것도 되긴됨. 30은 짤린다			
+			alert(sum(arr.length));
+</script>		
+</head>
+<body>
+		<h1>javascript</h1>
+		
+</body>
+</html>

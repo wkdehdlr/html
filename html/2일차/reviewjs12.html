@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+		<meta charset="UTF-8" />
+		<title>javascript 연습중</title>
+<script>		
+			window.onload = function(){
+				var tmp = document.getElementsByTagName("div");
+				console.log(tmp);
+				var sum=0;
+				for(var i=0;i<tmp.length;++i)
+				{
+					sum+=parseFloat((tmp.item(i).textContent));
+				}
+				alert(sum);
+			}
+		
+</script>		
+</head>
+<body>
+
+		<div>10</div>
+		<div>20</div>
+		<div>30</div>		
+</body>
+</html>
