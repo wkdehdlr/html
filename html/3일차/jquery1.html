@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>jquery 연습중</title>
+	<script src="jquery-3.3.1.min.js"></script>
+<script>
+			$(document).ready(function(){
+				//alert("jquery test");
+				$("div.coffee").click(function(){
+					//alert("안녕하세요");
+					$(this).text("Hello");
+					$('<img src="messi1.jpg"/>').appendTo('body');
+				});
+			});
+</script>	
+</head>
+<body>
+		<div class="coffee" style="background:yellow;width:50">Jquery</div>
+		<div>Jquery</div>
+		<div>Jquery</div>		
+</body>
+</html>

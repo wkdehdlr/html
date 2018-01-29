@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+         <meta charset="UTF-8"/>
+         <title>jquery 연습중</title>  
+         <link rel="stylesheet" href="colorbox.css" />
+         <script src="jquery-3.3.1.min.js"></script>
+         <script src="jquery.colorbox.js"></script>
+<script>
+
+         $(document).ready(function(){
+            $(".messi").colorbox({rel:"messi"});
+            $(".youtube").colorbox({
+               iframe:true,
+               innerWidth:560,
+               innerHeight:315,
+               scrolling:false
+            });
+         });
+
+</script>
+<style>
+         #colorbox iframe{
+            width:560px;
+            height:315px;
+         }
+         .messi, .youtube{
+            text-decoration: none;
+         } 
+</style>         
+<body>   
+</head> 
+      <a href="messi1.jpg" class="messi">메시 이미지입니다</a><br/>
+      <a href="messi2.jpg" class="messi">메시 이미지입니다</a><br/>
+      <a href="messi3.jpg" class="messi">메시 이미지입니다</a><br/>
+      <a href="https://www.youtube.com/embed/LEoc4o8yKJc" class="youtube">youtube</a>
+</body>
+</html>
